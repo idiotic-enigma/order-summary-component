@@ -4,7 +4,7 @@
 /*	'font-face' Generator
 			Generates a new font family based on parameters given
 */
-@mixin new-font-def($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
+@mixin font-family($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
   $file: $url + '/' + $weight-num + '-' + $weight-name;
 
   @font-face {
