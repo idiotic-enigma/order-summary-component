@@ -1,0 +1,12 @@
+/*	Base - Fonts
+		============================================================ */
+
+/*	'Red Hat Display' */
+/*  - 500 */
+@include font-family($url-redhatdisplay, 500, 'medium', 'Red Hat Display');
+
+/*  - 700 */
+@include font-family($url-redhatdisplay, 700, 'bold', 'Red Hat Display');
+
+/*  - 900 */
+@include font-family($url-redhatdisplay, 900, 'black', 'Red Hat Display');
