@@ -24,6 +24,12 @@
 		color: $col-first-tone4;
 	}
 
-	/*	- Text */
+	/*	Text */
 	&__text { text-align: center; }
+
+	/*	Item list */
+	&__list {
+		margin: 1.6rem 0;
+		list-style: none;
+	}
 }
