@@ -1,0 +1,29 @@
+/*	Component - Order Summary
+		[Default] - ============================================ */
+
+.order-sum {
+	/*	Prevents head image ignoring border radius */
+	overflow: hidden;
+
+	border-radius: $brd-large;
+	max-width: 37.5rem;
+	background-color: $gry-light-1;
+
+	/*	Head image */
+	&__head-image { display: block; }
+
+	/*	Content Container */
+	&__content-box { padding: 2.4rem; }
+
+	/*	Heading */
+	&__heading {
+		margin-bottom: 1.6rem;
+		font-size: $font-large;
+		font-weight: 900;
+		text-align: center;
+		color: $col-first-tone4;
+	}
+
+	/*	- Text */
+	&__text { text-align: center; }
+}
