@@ -1,0 +1,34 @@
+/*	Base - Base Styles
+		[Default] - ================================================ */
+
+html {
+	/*	'border-box' sizing for preferred sizing of elements */
+	box-sizing: border-box;
+
+	/*	Translates to one REM unit equaling 10 pixels */
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	/*	Remove default padding and margin on all elements */
+	margin: 0;
+	padding: 0;
+
+	/*	apply 'border-box' box-sizing on all elements */
+	box-sizing: inherit;
+}
+
+body {
+	/*	Default typography */
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: $font-normal;
+	font-weight: 500;
+	line-height: 1.7;
+	color: $col-first-tone3;
+
+	/*	Page background */
+	background: url('#{$url-media}/pattern-background-mobile.svg') 0 0 / 100% no-repeat $col-first-tone2;
+
+}
