@@ -21,6 +21,13 @@ html {
 }
 
 body {
+	/*	Page layout */
+	display: grid;
+	grid-template-rows: 1fr min-content;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
 	/*	Default typography */
 	font-family: 'Red Hat Display', sans-serif;
 	font-size: $font-normal;
