@@ -1,0 +1,32 @@
+/*	Component - Order Summary Item
+		[Default] - ================================================ */
+
+.order-sum-item {
+	/*	Layout */
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	padding: 1.6rem;
+
+	/*	Background */
+	background-color: $col-first-tone1;
+
+	/*	Icon image */
+	&__img { flex-shrink: 1; }
+
+	/*	Text container */
+	&__text-box { flex-grow: 1; }
+
+	/*	Heading */
+	&__heading {
+		font-size: $font-normal;
+		font-weight: 900;
+		color: $col-first-tone4;
+	}
+
+	/*	Price text */
+	&__price {}
+
+	/*	Link */
+	&__link { flex-shrink: 1; }
+}
