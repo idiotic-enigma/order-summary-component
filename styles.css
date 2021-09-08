@@ -1,0 +1,154 @@
+/*	Abstracts
+		============================================================ */
+/*	Abstracts - Variables
+		============================================================ */
+/*	URL shorthands */
+/*	- media directory */
+/*	- 'red-hat-display' font directory */
+/*	Colour values */
+/*	- primary / 'first' */
+/*	Greyscale values */
+/*	- light */
+/*	- dark */
+/* Font sizes */
+/*	Box shadows */
+/*	Border Radius */
+/*	Abstracts - Mixins
+		============================================================ */
+/*	'font-face' Generator
+			Generates a new font family based on parameters given
+*/
+/*	Base
+		============================================================ */
+/*	Base - Fonts
+		============================================================ */
+/*	'Red Hat Display' */
+/*  - 500 */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/order-summary-component/media/red-hat-display/500-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+}
+/*  - 700 */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/order-summary-component/media/red-hat-display/700-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+}
+/*  - 900 */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/order-summary-component/media/red-hat-display/900-black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: fallback;
+}
+/*	Base - Base Styles
+		[Default] - ================================================ */
+html {
+  /*	'border-box' sizing for preferred sizing of elements */
+  box-sizing: border-box;
+  /*	Translates to one REM unit equaling 10 pixels */
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  /*	Remove default padding and margin on all elements */
+  margin: 0;
+  padding: 0;
+  /*	apply 'border-box' box-sizing on all elements */
+  box-sizing: inherit;
+}
+
+body {
+  /*	Page layout */
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*	Default typography */
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #7280a7;
+  /*	Page background */
+  background: url("/order-summary-component/media/pattern-background-mobile.svg") 0 0/100% no-repeat #e0e8ff;
+}
+
+/*	Components
+		============================================================ */
+/*	Component - Order Summary
+		[Default] - ============================================ */
+.order-sum {
+  /*	Prevents head image ignoring border radius */
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 37.5rem;
+  background-color: #fff;
+  /*	Head image */
+  /*	Content Container */
+  /*	Heading */
+  /*	Text */
+  /*	Item list */
+}
+.order-sum__head-image {
+  display: block;
+}
+.order-sum__content-box {
+  padding: 2.4rem;
+}
+.order-sum__heading {
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-align: center;
+  color: #1f2f56;
+}
+.order-sum__text {
+  text-align: center;
+}
+.order-sum__list {
+  margin: 1.6rem 0;
+  list-style: none;
+}
+
+/*	Component - Order Summary Item
+		[Default] - ================================================ */
+.order-sum-item {
+  /*	Layout */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  /*	Background */
+  background-color: #f5f7ff;
+  /*	Icon image */
+  /*	Text container */
+  /*	Heading */
+  /*	Price text */
+  /*	Link */
+}
+.order-sum-item__img {
+  flex-shrink: 1;
+}
+.order-sum-item__text-box {
+  flex-grow: 1;
+}
+.order-sum-item__heading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+.order-sum-item__link {
+  flex-shrink: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
