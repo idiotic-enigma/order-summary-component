@@ -1,0 +1,36 @@
+/*	Abstracts - Variables
+		============================================================ */
+
+/*	URL shorthands */
+/*	- media directory */
+$url-media: '/order-summary-component/media';
+
+/*	- 'red-hat-display' font directory */
+$url-redhatdisplay: $url-media + '/red-hat-display';
+
+/*	Colour values */
+/*	- primary / 'first' */
+$col-first: hsl(245, 75%, 52%);
+
+$col-first-tone1: hsl(225, 100%, 98%); 
+$col-first-tone2: hsl(225, 100%, 94%);
+$col-first-tone3: hsl(224, 23%, 55%);
+$col-first-tone4: hsl(223, 47%, 23%);
+
+/*	Greyscale values */
+/*	- light */
+$gry-light-1: #fff;
+
+/*	- dark */
+$gry-dark-1: #000;
+
+/* Font sizes */
+$font-normal: 1.6rem;
+$font-large: 2.4rem;
+
+/*	Box shadows */
+$shd-light-soft: 0 unit-scale(2) unit-scale(5) rgba($gry-dark-1, .15);
+
+/*	Border Radius */
+$brd-large: 8px;
+$brd-circle: 2048px;
