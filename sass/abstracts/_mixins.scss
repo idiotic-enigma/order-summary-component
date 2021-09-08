@@ -1,0 +1,18 @@
+/*	Abstracts - Mixins
+		============================================================ */
+
+/*	'font-face' Generator
+			Generates a new font family based on parameters given
+*/
+@mixin new-font-def($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
+  $file: $url + '/' + $weight-num + '-' + $weight-name;
+
+  @font-face {
+    font-family: $family;
+    src:
+      url('#{$file}.woff2') format('woff2');
+    font-style: #{$style};
+    font-weight: $weight-num;
+    font-display: fallback;
+  }
+}
