@@ -1,0 +1,21 @@
+/*	Component - Link
+		[Default] - ================================================ */
+
+.link {
+
+	/* 'link', 'visited' states */
+	&:link,
+	&:visited {
+		font-weight: 700;
+		text-decoration: none;
+		color: $col-first;
+	}
+
+	/* 'Grey' variation */
+	&--grey {
+
+		/* 'link', 'visited' states */
+		&:link,
+		&:visited { color: $col-first-tone3; }
+	}
+}
