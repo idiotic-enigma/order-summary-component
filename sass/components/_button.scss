@@ -3,12 +3,21 @@
 
 .btn {
 	display: block;
-	margin: 0 auto;
+	margin: 2.2rem 0;
 	border: none;
-	border-radius: $brd-large;
-	padding: 0;
-	box-shadow: $shd-light-soft;
+	border-radius: $brd-medium;
+	padding: 1.6rem 0;
+	box-shadow: $shd-dark-soft;
 	cursor: pointer;
 	font-size: $font-normal;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
 	line-height: 1;
+
+	/* 'Highlighted' variation */
+	&--highlight {
+		background-color: $col-first;
+		color: $gry-light-1;
+	}
 }
