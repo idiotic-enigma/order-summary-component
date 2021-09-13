@@ -30,8 +30,10 @@ $font-normal: 1.6rem;
 $font-large: 2.4rem;
 
 /*	Box shadows */
-$shd-light-soft: 0 unit-scale(2) unit-scale(5) rgba($gry-dark-1, .15);
+$shd-light-soft: 0 2.4rem 3.2rem rgba($col-first, .1);
+$shd-dark-soft: 0 1.4rem 1.6rem rgba($col-first, .2);
 
 /*	Border Radius */
+$brd-medium: 12px;
 $brd-large: 16px;
 $brd-circle: 2048px;
