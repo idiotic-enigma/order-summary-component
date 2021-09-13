@@ -1,0 +1,14 @@
+/*	Component - Button
+		[Default] - ================================================ */
+
+.btn {
+	display: block;
+	margin: 0 auto;
+	border: none;
+	border-radius: $brd-large;
+	padding: 0;
+	box-shadow: $shd-light-soft;
+	cursor: pointer;
+	font-size: $font-normal;
+	line-height: 1;
+}
