@@ -28,5 +28,15 @@
 	&__price {}
 
 	/*	Link */
-	&__link { flex-shrink: 1; }
+	&__link {
+		flex-shrink: 1;
+
+			/*	'link', 'visited' states */
+		&:link,
+		&:visited {
+			font-size: $font-small;
+			font-weight: 700;
+			color: $col-first;
+		}
+	}
 }
