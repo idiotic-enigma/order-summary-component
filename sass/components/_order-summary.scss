@@ -14,23 +14,31 @@
 	&__head-image { display: block; }
 
 	/*	Content Container */
-	&__content-box { padding: 2.4rem; }
+	&__content-box {
+		padding: 2.4rem;
+
+		/* Affects: heading, text, '.link' */
+		text-align: center;
+	}
 
 	/*	Heading */
 	&__heading {
 		margin-bottom: 1.6rem;
 		font-size: $font-large;
 		font-weight: 900;
-		text-align: center;
 		color: $col-first-tone4;
 	}
 
 	/*	Text */
-	&__text { text-align: center; }
+	&__text { }
 
 	/*	Item list */
 	&__list {
 		margin: 1.6rem 0;
 		list-style: none;
 	}
+
+	/* continue button, cancel link */
+	&__continue,
+	&__cancel { font-size: 1.4rem; }
 }
