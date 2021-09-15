@@ -1,5 +1,5 @@
-/*	Base - Base Styles
-		[Default] - ================================================ */
+/*	Base : Base Styles - ======================================= */
+/*	[Default] -------------------------------------------------- */
 
 html {
 	/*	'border-box' sizing for preferred sizing of elements */
@@ -35,16 +35,26 @@ body {
 	line-height: 1.7;
 	color: $col-first-tone3;
 
-	/*	Page background */
-	background: url('#{$url-media}/pattern-background-mobile.svg') 0 0 / 100% no-repeat $col-first-tone2;
-
 }
 
 /* Attribution */
 .attribution {
+	margin-bottom: .8rem;
 	font-size: $font-semi-small;
 	text-align: center;
 
 	/* Link */
 	& a { color: $col-attribution; }
+}
+
+/*	[Media - max width: 375px] --------------------------------- */
+
+@media only screen and (max-width: 23.4375em)	{
+	body{
+		/*	Page layout */
+		padding: 0 2.4rem;
+
+		/* page background */
+		background: url(#{$url-media}/pattern-background-mobile.svg) 0 0 / 100% no-repeat $col-first-tone2;
+	}
 }
