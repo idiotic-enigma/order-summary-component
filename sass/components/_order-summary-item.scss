@@ -1,13 +1,13 @@
-/*	Component - Order Summary Item
-		[Default] - ================================================ */
+/*	Component : Order Summary Item - ======================= */
 
+/*	[default] ---------------------------------------------- */
 .order-sum-item {
 	/*	Layout */
 	display: flex;
 	align-items: center;
 	gap: 2rem;
 	border-radius: $brd-medium;
-	padding: 2.4rem;
+	//padding: 2.4rem;
 
 	/*	Background */
 	background-color: $col-first-tone1;
@@ -23,24 +23,35 @@
 
 	/*	Heading */
 	&__heading {
-		font-size: $font-normal;
+		/* inherits from 'order-sum-item' */
+		font-size: inherit;
 		font-weight: 900;
 		color: $col-first-tone4;
 	}
 
 	/*	Price text */
-	&__price {}
+	&__price {
+		/* inherits from 'order-sum-item' */
+		font-size: inherit;
+	}
 
 	/*	Link */
 	&__link {
 		flex-shrink: 1;
+		font-size: $font-semi-small;
 
 			/*	'link', 'visited' states */
 		&:link,
 		&:visited {
-			font-size: $font-small;
 			font-weight: 700;
 			color: $col-first;
 		}
+	}
+
+/*	[Media - max width: 375px] --------------------------------- */
+	@media only screen and (max-width: 23.4375em)	{
+		/* layout */
+		padding: 1.6rem;
+		font-size: $font-small;
 	}
 }
