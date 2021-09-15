@@ -7,6 +7,7 @@
 /*	- 'red-hat-display' font directory */
 /*	Colour values */
 /*	- primary / 'first' */
+/*	- attribution text */
 /*	Greyscale values */
 /*	- light */
 /*	- dark */
@@ -47,8 +48,8 @@
   font-weight: 900;
   font-display: fallback;
 }
-/*	Base - Base Styles
-		[Default] - ================================================ */
+/*	Base : Base Styles - ======================================= */
+/*	[Default] -------------------------------------------------- */
 html {
   /*	'border-box' sizing for preferred sizing of elements */
   box-sizing: border-box;
@@ -79,20 +80,43 @@ body {
   font-weight: 500;
   line-height: 1.7;
   color: #7280a7;
-  /*	Page background */
-  background: url("/order-summary-component/media/pattern-background-mobile.svg") 0 0/100% no-repeat #e0e8ff;
 }
 
+/* Attribution */
+.attribution {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  text-align: center;
+  /* Link */
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*	[Media - max-width: 497px] --------------------------------- */
+@media only screen and (max-width: 31.0625em) {
+  body {
+    /*	Page layout */
+    padding: 0 2.4rem;
+    /* page background */
+    background: url(/order-summary-component/media/pattern-background-mobile.svg) 0 0/100% no-repeat #e0e8ff;
+  }
+}
+/*	[Media - min-width: 498px] --------------------------------- */
+@media only screen and (min-width: 31.125em) {
+  body {
+    background: url(/order-summary-component/media/pattern-background-desktop.svg) 0 0/100% no-repeat #e0e8ff;
+  }
+}
 /*	Components
 		============================================================ */
 /*	Component - Button
 		[Default] - ================================================ */
 .btn {
   display: block;
-  margin: 2.2rem 0;
   border: none;
   border-radius: 12px;
-  padding: 1.6rem 0;
+  padding: 1.8rem 0;
   box-shadow: 0 1.4rem 1.6rem rgba(56, 41, 224, 0.2);
   cursor: pointer;
   font-size: 1.6rem;
@@ -125,53 +149,105 @@ body {
   color: #7280a7;
 }
 
-/*	Component - Order Summary
-		[Default] - ============================================ */
+/*	Component : Order Summary - ============================ */
+/*	[Default] ---------------------------------------------- */
 .order-sum {
   /*	Prevents head image ignoring border radius */
   overflow: hidden;
   border-radius: 16px;
-  max-width: 37.5rem;
   box-shadow: 0 2.4rem 3.2rem rgba(56, 41, 224, 0.1);
   background-color: #fff;
-  /*	Head image */
+  /* hero image */
   /*	Content Container */
   /*	Heading */
-  /*	Text */
   /*	Item list */
-  /* continue button, cancel link */
+  /* continue button */
+  /* cancel link */
+  /*	[Media - max-width: 497px] --------------------------------- */
+  /*	[Media - min-width: 498px] --------------------------------- */
 }
 .order-sum__head-image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .order-sum__content-box {
-  padding: 2.4rem;
   /* Affects: heading, text, '.link' */
   text-align: center;
 }
 .order-sum__heading {
-  margin-bottom: 1.6rem;
-  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
   font-weight: 900;
   color: #1f2f56;
 }
 .order-sum__list {
-  margin: 1.6rem 0;
   list-style: none;
 }
-.order-sum__continue, .order-sum__cancel {
-  font-size: 1.4rem;
+.order-sum__continue {
+  font-size: 1.5rem;
+}
+.order-sum__cancel {
+  font-size: 1.5rem;
+  /* 'link', 'visited' states */
+}
+.order-sum__cancel:link, .order-sum__cancel:visited {
+  font-weight: 900;
+}
+@media only screen and (max-width: 31.0625em) {
+  .order-sum {
+    width: 32.7rem;
+    /* content container */
+    /* heading */
+    /* item list */
+    /* text */
+    /* 'proceed' button */
+  }
+  .order-sum__content-box {
+    padding: 3.2rem 2.4rem;
+  }
+  .order-sum__heading {
+    font-size: 2.2rem;
+  }
+  .order-sum__list {
+    margin: 2.4rem 0;
+  }
+  .order-sum__text {
+    font-size: 1.4rem;
+  }
+  .order-sum__continue {
+    margin-bottom: 1.6rem;
+  }
+}
+@media only screen and (min-width: 31.125em) {
+  .order-sum {
+    width: 45rem;
+    /* content container */
+    /* heading */
+    /* item list */
+    /* 'proceed' button */
+  }
+  .order-sum__content-box {
+    padding: 4.2rem 4.8rem;
+  }
+  .order-sum__heading {
+    font-size: 2.8rem;
+  }
+  .order-sum__list {
+    margin: 1.2rem 0 2.8rem;
+  }
+  .order-sum__continue {
+    margin-bottom: 2.8rem;
+  }
 }
 
-/*	Component - Order Summary Item
-		[Default] - ================================================ */
+/*	Component : Order Summary Item - ======================= */
+/*	[default] ---------------------------------------------- */
 .order-sum-item {
   /*	Layout */
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2rem;
   border-radius: 12px;
-  padding: 1.6rem;
   /*	Background */
   background-color: #f5f7ff;
   /*	Icon image */
@@ -179,26 +255,53 @@ body {
   /*	Heading */
   /*	Price text */
   /*	Link */
+  /*	[Media - max-width: 497px] --------------------------------- */
+  /*	[Media - min-width: 498px] --------------------------------- */
 }
 .order-sum-item__img {
   flex-shrink: 1;
 }
 .order-sum-item__text-box {
   flex-grow: 1;
+  text-align: left;
 }
 .order-sum-item__heading {
-  font-size: 1.6rem;
+  /* inherits from 'order-sum-item' */
+  font-size: inherit;
   font-weight: 900;
   color: #1f2f56;
+}
+.order-sum-item__price {
+  /* inherits from 'order-sum-item' */
+  font-size: inherit;
 }
 .order-sum-item__link {
   flex-shrink: 1;
   /*	'link', 'visited' states */
 }
 .order-sum-item__link:link, .order-sum-item__link:visited {
-  font-size: 1.4rem;
   font-weight: 700;
   color: #3829e0;
+}
+@media only screen and (max-width: 31.0625em) {
+  .order-sum-item {
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    /* 'change' link */
+  }
+  .order-sum-item__link {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 31.125em) {
+  .order-sum-item {
+    padding: 2.4rem;
+    font-size: 1.6rem;
+    /* 'change' link */
+  }
+  .order-sum-item__link {
+    font-size: 1.4rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
