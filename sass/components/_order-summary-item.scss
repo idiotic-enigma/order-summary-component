@@ -5,9 +5,9 @@
 	/*	Layout */
 	display: flex;
 	align-items: center;
-	gap: 1.6rem;
+	gap: 2rem;
 	border-radius: $brd-medium;
-	padding: 1.6rem;
+	padding: 2.4rem;
 
 	/*	Background */
 	background-color: $col-first-tone1;
@@ -16,7 +16,10 @@
 	&__img { flex-shrink: 1; }
 
 	/*	Text container */
-	&__text-box { flex-grow: 1; }
+	&__text-box {
+		flex-grow: 1;
+		text-align: left;
+	}
 
 	/*	Heading */
 	&__heading {
