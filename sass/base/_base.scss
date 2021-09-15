@@ -1,6 +1,6 @@
 /*	Base : Base Styles - ======================================= */
-/*	[Default] -------------------------------------------------- */
 
+/*	[Default] -------------------------------------------------- */
 html {
 	/*	'border-box' sizing for preferred sizing of elements */
 	box-sizing: border-box;
@@ -34,7 +34,6 @@ body {
 	font-weight: 500;
 	line-height: 1.7;
 	color: $col-first-tone3;
-
 }
 
 /* Attribution */
@@ -47,14 +46,20 @@ body {
 	& a { color: $col-attribution; }
 }
 
-/*	[Media - max width: 375px] --------------------------------- */
-
-@media only screen and (max-width: 23.4375em)	{
+/*	[Media - max-width: 497px] --------------------------------- */
+@media only screen and (max-width: 31.0625em)	{
 	body{
 		/*	Page layout */
 		padding: 0 2.4rem;
 
 		/* page background */
 		background: url(#{$url-media}/pattern-background-mobile.svg) 0 0 / 100% no-repeat $col-first-tone2;
+	}
+}
+
+/*	[Media - min-width: 498px] --------------------------------- */
+@media only screen and (min-width: 31.125em)	{
+	body{
+		background: url(#{$url-media}/pattern-background-desktop.svg) 0 0 / 100% no-repeat $col-first-tone2;
 	}
 }
