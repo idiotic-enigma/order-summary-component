@@ -17,6 +17,9 @@ $col-first-tone2: hsl(225, 100%, 94%);
 $col-first-tone3: hsl(224, 23%, 55%);
 $col-first-tone4: hsl(223, 47%, 23%);
 
+/*	- attribution text */
+$col-attribution: hsl(228, 45%, 44%);
+
 /*	Greyscale values */
 /*	- light */
 $gry-light-1: #fff;
@@ -25,6 +28,7 @@ $gry-light-1: #fff;
 $gry-dark-1: #000;
 
 /* Font sizes */
+$font-semi-small: 1.2rem;
 $font-small: 1.4rem;
 $font-normal: 1.6rem;
 $font-large: 2.4rem;
