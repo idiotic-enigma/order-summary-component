@@ -36,14 +36,33 @@
 
 	/*	Link */
 	&__link {
+		/* transition */
+		transition:
+			text-decoration-color .2s,
+			color .2s
+		;
+		position: relative;
+		z-index: 0;
 		flex-shrink: 1;
 
-			/*	'link', 'visited' states */
+		/* 'link', 'visited' states */
 		&:link,
 		&:visited {
+			outline: none;
 			font-weight: 700;
 			color: $col-first;
 		}
+		
+		/* 'focus', 'hover', 'active' states */
+		&:focus,
+		&:hover,
+		&:active {
+			text-decoration-color: transparent;
+			color: $col-first-active;
+		}
+
+		/* see line 19 of 'abstracts/_mixins.scss' for context */
+		@include focus-effect;
 	}
 
 /*	[Media - max-width: 497px] --------------------------------- */

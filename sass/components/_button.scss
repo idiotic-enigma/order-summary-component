@@ -1,11 +1,17 @@
-/*	Component - Button
-		[Default] - ================================================ */
+/*	Component : Button - ======================================= */
 
+/*	[default] -------------------------------------------------- */
 .btn {
+	/* transition */
+	transition: background-color .2s;
+
+	position: relative;
+	z-index: 0;
 	display: block;
 	border: none;
 	border-radius: $brd-medium;
 	padding: 1.8rem 0;
+	outline: none;
 	box-shadow: $shd-dark-soft;
 	cursor: pointer;
 	font-size: $font-normal;
@@ -14,9 +20,17 @@
 	text-decoration: none;
 	line-height: 1;
 
-	/* 'Highlighted' variation */
+	/* primary colour */
 	&--highlight {
 		background-color: $col-first;
 		color: $gry-light-1;
+
+		/* 'hover', 'active' states */
+		&:focus,
+		&:hover,
+		&:active { background-color: $col-first-active; }
 	}
+
+	/* see line 19 of 'abstracts/_mixins.scss' for context */
+	@include focus-effect;
 }

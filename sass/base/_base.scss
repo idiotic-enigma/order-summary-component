@@ -37,18 +37,40 @@ body {
 }
 
 /* Attribution */
-.attribution {
+.attribution {	
+
 	margin-bottom: .8rem;
 	font-size: $font-semi-small;
 	text-align: center;
 
-	/* Link */
-	& a { color: $col-attribution; }
+	/* links */
+	& a {
+		/* transition */
+		transition: color .2s;
+
+		position: relative;
+		z-index: 0;
+
+		/* 'link', 'visited' states */
+		&:link,
+		&:visited {
+			color: $col-attribution;
+			outline: none;
+		}
+
+		/* 'focus', 'hover', 'active' states */
+		&:focus,
+		&:hover,
+		&:active {color: $col-first-tone3; }
+
+		/* see line 19 of 'abstracts/_mixins.scss' for context */
+		@include focus-effect(0, 0);
+	}
 }
 
 /*	[Media - max-width: 497px] --------------------------------- */
 @media only screen and (max-width: 31.0625em)	{
-	body{
+	body {
 		/*	Page layout */
 		padding: 0 2.4rem;
 
@@ -59,7 +81,7 @@ body {
 
 /*	[Media - min-width: 498px] --------------------------------- */
 @media only screen and (min-width: 31.125em)	{
-	body{
+	body {
 		background: url(#{$url-media}/pattern-background-desktop.svg) 0 0 / 100% no-repeat $col-first-tone2;
 	}
 }

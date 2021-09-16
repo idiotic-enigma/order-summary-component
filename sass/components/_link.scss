@@ -2,10 +2,16 @@
 		[Default] - ================================================ */
 
 .link {
+	/* transition */
+	transition: color .2s;
+
+	position: relative;
+	z-index: 0;
 
 	/* 'link', 'visited' states */
 	&:link,
 	&:visited {
+		outline: none;
 		font-weight: 700;
 		text-decoration: none;
 		color: $col-first;
@@ -13,9 +19,16 @@
 
 	/* 'Grey' variation */
 	&--grey {
-
 		/* 'link', 'visited' states */
 		&:link,
 		&:visited { color: $col-first-tone3; }
+
+		/* 'focus' 'hover', 'active' states */
+		&:focus,
+		&:hover,
+		&:active { color: $col-first-tone4; }
 	}
+
+	/* see line 19 of 'abstracts/_mixins.scss' for context */
+	@include focus-effect;
 }
