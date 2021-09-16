@@ -1,9 +1,8 @@
-/*	Abstracts - Mixins
-		============================================================ */
+/*	Abstracts : Mixins - =================================== */
 
-/*	'font-face' Generator
-			Generates a new font family based on parameters given
-*/
+/*	['font-face' generator] -------------------------------- */
+/*	generates a new font family based on parameters given */
+
 @mixin font-family($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
   $file: $url + '/' + $weight-num + '-' + $weight-name;
 
@@ -15,4 +14,28 @@
     font-weight: $weight-num;
     font-display: fallback;
   }
+}
+
+/*	['focus' effect] --------------------------------------- */
+/*	styles for elements that are focus-able */
+@mixin focus-effect($width: -.8rem, $height: -.4rem) {
+	/* 'before' pseudo */
+	&::before {
+		/* transition */
+		transition:
+			outline-color .1s,
+			background-color .1s
+		;
+		content: '';
+		position: absolute;
+		z-index: -1;
+		inset: $width $height;
+		outline: transparent solid 2px;
+	}
+
+	/* 'focus' state > 'before' pseudo */
+	&:focus::before {
+		outline-color: rgba($col-first-tone3, .5);
+		background-color: rgba($col-first-tone4, .2);
+	}
 }
