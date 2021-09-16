@@ -1,8 +1,8 @@
 /*	Abstracts - Variables
 		============================================================ */
 
-/*	URL shorthands */
-/*	- media directory */
+/* URL shorthands */
+/* - media directory */
 $url-media: '/order-summary-component/media';
 
 /*	- 'red-hat-display' font directory */
@@ -11,6 +11,8 @@ $url-redhatdisplay: $url-media + '/red-hat-display';
 /*	Colour values */
 /*	- primary / 'first' */
 $col-first: hsl(245, 75%, 52%);
+
+$col-first-active: hsl(245,83,68);
 
 $col-first-tone1: hsl(225, 100%, 98%); 
 $col-first-tone2: hsl(225, 100%, 94%);
