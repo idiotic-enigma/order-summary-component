@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
-		<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   
-		<title>Frontend Mentor | Order summary card</title>
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
+  <body class="l-grid">
+    <main class="main">
+      <article class="order-sum">
+        <img class="order-sum__head-image" src="media/illustration-hero.svg" width="450" height="220" alt="">
+        <div class="order-sum__content-box">
+          <h1 class="order-sum__heading">Order Summary</h1>
+          <p class="order-sum__text">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+          <ul class="order-sum__list">
+            <li class="order-sum-item">
+              <img class="order-sum-item__img" src="media/icon-music.svg" alt="">
+              <div class="order-sum-item__text-box">
+                <h2 class="order-sum-item__heading">Annual Plan</h2>
+                <p class="order-sum-item__price">$59.99/year</p>
+              </div>
+              <a href="./" class="order-sum-item__link link">Change</a>
+            </li>
+          </ul>
+          <a href="./" class="order-sum__continue btn btn--highlight">Proceed to Payment</a>
+          <a href="./" class="order-sum__cancel link link--grey">Cancel Order</a>
+        </div>
+      </article>
+    </main>
 
-	</head>
-	<body>
-		<main>
-			<article class="order-sum">
-				<img class="order-sum__head-image" src="media/illustration-hero.svg" width="450" height="220" alt="">
-				<div class="order-sum__content-box">
-					<h1 class="order-sum__heading">Order Summary</h1>
-					<p class="order-sum__text">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-					<ul class="order-sum__list">
-						<li class="order-sum-item">
-							<img class="order-sum-item__img" src="media/icon-music.svg" alt="">
-							<div class="order-sum-item__text-box">
-								<h2 class="order-sum-item__heading">Annual Plan</h2>
-								<p class="order-sum-item__price">$59.99/year</p>
-							</div>
-							<a href="./" class="order-sum-item__link">Change</a>
-						</li>
-					</ul>
-					<a href="./" class="order-sum__continue btn btn--highlight">Proceed to Payment</a>
-					<a href="./" class="order-sum__cancel link link--grey">Cancel Order</a>
-				</div>
-			</article>
-		</main>
-
-		<footer class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-			Coded by <a href="https://github.com/idiotic-enigma">Idiotic Enigma</a>.
-		</footer>
-	</body>
+    <footer class="attribution">
+      Challenge by <a class="link link--attribution" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="link link--attribution" href="https://github.com/idiotic-enigma">Idiotic Enigma</a>.
+    </footer>
+  </body>
 </html>

@@ -1,12 +1,11 @@
-/*	Base - Fonts
-		============================================================ */
+/* Base : Fonts - ======================================================== - */
 
-/*	'Red Hat Display' */
+/* 'Red Hat Display' */
 /*  - 500 */
-@include font-family($url-redhatdisplay, 500, 'medium', 'Red Hat Display');
+@include font-face( map.get($urls, 'red-hat-display'), 500, 'medium', 'Red Hat Display' );
 
 /*  - 700 */
-@include font-family($url-redhatdisplay, 700, 'bold', 'Red Hat Display');
+@include font-face( map.get($urls, 'red-hat-display'), 700, 'bold', 'Red Hat Display' );
 
 /*  - 900 */
-@include font-family($url-redhatdisplay, 900, 'black', 'Red Hat Display');
+@include font-face( map.get($urls, 'red-hat-display'), 900, 'black', 'Red Hat Display' );

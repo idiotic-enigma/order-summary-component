@@ -1,85 +1,72 @@
-/*	Component : Order Summary Item - ======================= */
+/* Component : Order Summary Item - ====================================== - */
 
-/*	[default] ---------------------------------------------- */
+/* [Default] --------------------------------------------------------------- */
 .order-sum-item {
-	/*	Layout */
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-	border-radius: $brd-medium;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: map.get($border-radii, 'medium');
+  background-color: map.get($colors-primary, 'tone-1');
 
-	/*	Background */
-	background-color: $col-first-tone1;
+  /* icon image */
+  &__img { flex-shrink: 1; }
 
-	/*	Icon image */
-	&__img { flex-shrink: 1; }
+	/* text container */
+  &__text-box {
+    flex-grow: 1;
+    text-align: left;
+  }
 
-	/*	Text container */
-	&__text-box {
-		flex-grow: 1;
-		text-align: left;
-	}
+  /* heading
+   * font-size inherits from 'order-sum-item'
+   * text-align inherits from 'text-box' */
+  &__heading {
+    font-size: inherit;
+    font-weight: 900;
+    text-align: inherit;
+    color: map.get($colors-primary, 'tone-4');
+  }
 
-	/*	Heading */
-	&__heading {
-		/* inherits from 'order-sum-item' */
-		font-size: inherit;
-		font-weight: 900;
-		color: $col-first-tone4;
-	}
-
-	/*	Price text */
+  /* price text
+   * font-size inherits from 'order-sum-item'
+   * text-align inherits from 'text-box' */
 	&__price {
-		/* inherits from 'order-sum-item' */
-		font-size: inherit;
-	}
+    font-size: inherit;
+    text-align: inherit;
+  }
 
-	/*	Link */
-	&__link {
-		/* transition */
-		transition:
-			text-decoration-color .2s,
-			color .2s
-		;
-		position: relative;
-		z-index: 0;
-		flex-shrink: 1;
+	/* 'change' link */
+  &__link {
+    transition:
+      text-decoration-color .2s,
+      color .2s
+    ;
+    flex-shrink: 1;
 
-		/* 'link', 'visited' states */
-		&:link,
-		&:visited {
-			outline: none;
-			font-weight: 700;
-			color: $col-first;
-		}
-		
-		/* 'focus', 'hover', 'active' states */
-		&:focus,
-		&:hover,
-		&:active {
-			text-decoration-color: transparent;
-			color: $col-first-active;
-		}
+    /* 'focus', 'hover', 'active' states */
+    &:focus,
+    &:hover,
+    &:active { text-decoration-color: transparent; }
 
-		/* see line 19 of 'abstracts/_mixins.scss' for context */
-		@include focus-effect;
-	}
+    // styles for when element is focused
+    @include focus-effect;
+  }
 
-/*	[Media - max-width: 497px] --------------------------------- */
-	@media only screen and (max-width: 31.0625em)	{
-		padding: 1.6rem;
-		font-size: $font-small;
+/* [Media : max-width: 498px] ---------------------------------------------- */
+  @media only screen and (max-width: 31.125em)	{
+    padding: 1.6rem;
+    font-size: map.get($font-sizes, 'small');
 
-		/* 'change' link */
-		&__link { font-size: $font-semi-small; }
-	}
+    /* 'change' link */
+    &__link { font-size: map.get($font-sizes, 'semi-small'); }
+  }
 
-/*	[Media - min-width: 498px] --------------------------------- */
-	@media only screen and (min-width: 31.125em)	{
-		padding: 2.4rem;
-		font-size: $font-normal;
-
-		/* 'change' link */
-		&__link { font-size: $font-small; }
-	}
+/* [Media : min-width: 498px] ---------------------------------------------- */
+  @media only screen and (min-width: 31.125em)	{
+    padding: 2.4rem;
+    font-size: map.get($font-sizes, 'normal');
+  
+    /* 'change' link */
+    &__link { font-size: map.get($font-sizes, 'small'); }
+  }
 }

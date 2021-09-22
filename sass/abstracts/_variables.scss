@@ -1,48 +1,49 @@
-/*	Abstracts - Variables
-		============================================================ */
+// Abstracts : Variables - ================================================== -
 
-/* URL shorthands */
-/* - media directory */
-$url-media: '/order-summary-component/media';
+// URL references
+$urls: (
+  'media' : './media/',
+  'red-hat-display' : './media/red-hat-display/'
+);
 
-/*	- 'red-hat-display' font directory */
-$url-redhatdisplay: $url-media + '/red-hat-display';
+// Colours
+$colors-primary: (
+  'main' : hsl(245, 75%, 52%),
+  'active' : hsl(245,83%,68%),
 
-/*	Colour values */
-/*	- primary / 'first' */
-$col-first: hsl(245, 75%, 52%);
-
-$col-first-active: hsl(245,83,68);
-
-$col-first-tone1: hsl(225, 100%, 98%); 
-$col-first-tone2: hsl(225, 100%, 94%);
-$col-first-tone3: hsl(224, 23%, 55%);
-$col-first-tone4: hsl(223, 47%, 23%);
-
-/*	- attribution text */
+  'tone-1' : hsl(225, 100%, 98%),
+  'tone-2' : hsl(225, 100%, 94%),
+  'tone-3' : hsl(224, 23%, 55%),
+  'tone-4' : hsl(223, 47%, 23%),
+);
 $col-attribution: hsl(228, 45%, 44%);
 
-/*	Greyscale values */
-/*	- light */
-$gry-light-1: #fff;
+// Greyscale
+$grayscale: (
+  'light-1' : #fff,
+  'dark-1' : #000
+);
 
-/*	- dark */
-$gry-dark-1: #000;
+// Font sizes
+$font-sizes: (
+  'semi-small' : 1.3rem,
+  'small' : 1.4rem,
+  'semi-normal' : 1.5rem,
+  'normal' : 1.6rem,
+  'medium' : 1.8rem,
+  'big' : 2.2rem,
+  'large' : 2.8rem
+);
 
-/* Font sizes */
-$font-semi-small: 1.3rem;
-$font-small: 1.4rem;
-$font-semi-normal: 1.5rem;
-$font-normal: 1.6rem;
-$font-medium: 1.8rem;
-$font-big: 2.2rem;
-$font-large: 2.8rem;
+// Box shadows
+$box-shadows: (
+  'light-blur' : 0 2.4rem 3.2rem rgba( map.get($colors-primary, 'main'), 0.1 ),
+  'harsh-blur' : 0 1.4rem 1.6rem rgba( map.get($colors-primary, 'main'), 0.2 )
+);
 
-/*	Box shadows */
-$shd-light-soft: 0 2.4rem 3.2rem rgba($col-first, .1);
-$shd-dark-soft: 0 1.4rem 1.6rem rgba($col-first, .2);
-
-/*	Border Radius */
-$brd-medium: 12px;
-$brd-large: 16px;
-$brd-circle: 2048px;
+//	Border radii
+$border-radii: (
+  'medium' : 12px,
+  'large' : 16px,
+  'circle' : 2048px
+);

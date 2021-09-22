@@ -1,15 +1,20 @@
-/*	Abstracts
-		============================================================ */
+// - Enforce 'UTF-8' charset
+// - Allow global use of SASS map functions
+@charset 'utf-8';
+@use 'sass:map';
+
+// Abstracts - ============================================================== -
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-/*	Base
-		============================================================ */
+// Base - =================================================================== -
 @import 'base/fonts';
 @import 'base/base';
 
-/*	Components
-		============================================================ */
+// Layout - ================================================================= -
+@import 'layout/grid';
+
+// Components - ============================================================= -
 @import 'components/button';
 @import 'components/link';
 @import 'components/order-summary';

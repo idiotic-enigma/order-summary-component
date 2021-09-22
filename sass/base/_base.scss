@@ -1,87 +1,49 @@
-/*	Base : Base Styles - ======================================= */
+/* Base : Base Styles - ================================================== - */
 
-/*	[Default] -------------------------------------------------- */
+/* [Default] --------------------------------------------------------------- */
+
+// HTML element applies two global changes:
+//  - 'border-box' ensures direct sizing of elements (i.e.: 'width' and
+//    'height') is not affected by 'padding', 'margin', 'border' etc.
+
+//  - 'font-size' translates to one REM unit equaling 10 pixels, assuming the
+//    browser default font size is 16px
+
 html {
-	/*	'border-box' sizing for preferred sizing of elements */
-	box-sizing: border-box;
-
-	/*	Translates to one REM unit equaling 10 pixels */
-	font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
+// Universal selectors enforce 'border-box' sizing everywhere
 *,
 *::before,
 *::after {
-	/*	Remove default padding and margin on all elements */
-	margin: 0;
-	padding: 0;
-
-	/*	apply 'border-box' box-sizing on all elements */
-	box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	/*	Page layout */
-	display: grid;
-	grid-template-rows: 1fr min-content;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-
-	/*	Default typography */
-	font-family: 'Red Hat Display', sans-serif;
-	font-size: $font-normal;
-	font-weight: 500;
-	line-height: 1.7;
-	color: $col-first-tone3;
+  /* default typography */
+  // Interpolation of forward-slash prevents division
+  font: 500 map.get($font-sizes, 'normal') #{'/'} 1.7 'Red Hat Display', sans-serif;
+  color: map.get($colors-primary, 'tone-3');
 }
 
-/* Attribution */
+/* 'attribution' container */
 .attribution {	
-
-	margin-bottom: .8rem;
-	font-size: $font-semi-small;
-	text-align: center;
-
-	/* links */
-	& a {
-		/* transition */
-		transition: color .2s;
-
-		position: relative;
-		z-index: 0;
-
-		/* 'link', 'visited' states */
-		&:link,
-		&:visited {
-			color: $col-attribution;
-			outline: none;
-		}
-
-		/* 'focus', 'hover', 'active' states */
-		&:focus,
-		&:hover,
-		&:active {color: $col-first-tone3; }
-
-		/* see line 19 of 'abstracts/_mixins.scss' for context */
-		@include focus-effect(0, 0);
-	}
+  font-size: map.get($font-sizes, 'semi-small');
+  text-align: center;
 }
 
-/*	[Media - max-width: 497px] --------------------------------- */
-@media only screen and (max-width: 31.0625em)	{
-	body {
-		/*	Page layout */
-		padding: 0 2.4rem;
-
-		/* page background */
-		background: url(#{$url-media}/pattern-background-mobile.svg) 0 0 / 100% no-repeat $col-first-tone2;
-	}
+/* [Media : max-width: 498px] ---------------------------------------------- */
+@media only screen and (max-width: 31.125em)	{
+  body { background: url('#{map.get($urls, "media")}/pattern-background-mobile.svg') 0 0 / 100% no-repeat map.get($colors-primary, 'tone-2'); }
 }
 
-/*	[Media - min-width: 498px] --------------------------------- */
+/* [Media : min-width: 498px] ---------------------------------------------- */
 @media only screen and (min-width: 31.125em)	{
-	body {
-		background: url(#{$url-media}/pattern-background-desktop.svg) 0 0 / 100% no-repeat $col-first-tone2;
-	}
+
+	body { background: url('#{map.get($urls, "media")}/pattern-background-desktop.svg') 0 0 / 100% no-repeat map.get($colors-primary, 'tone-2'); }
+
 }

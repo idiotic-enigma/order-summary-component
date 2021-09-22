@@ -1,36 +1,34 @@
-/*	Component : Button - ======================================= */
+/* Component : Button - ================================================== - */
 
-/*	[default] -------------------------------------------------- */
+/* [Default] --------------------------------------------------------------- */
 .btn {
-	/* transition */
-	transition: background-color .2s;
+  transition: background-color 0.2s;
+  position: relative;
+  z-index: 0;
+  display: block;
+  border: none;
+  border-radius: map.get($border-radii, 'medium');
+  padding: 1.8rem 0;
+  outline: none;
+  box-shadow: map.get($box-shadows, 'harsh-blur');
+  cursor: pointer;
+  font-size: map.get($font-sizes, 'normal');
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
 
-	position: relative;
-	z-index: 0;
-	display: block;
-	border: none;
-	border-radius: $brd-medium;
-	padding: 1.8rem 0;
-	outline: none;
-	box-shadow: $shd-dark-soft;
-	cursor: pointer;
-	font-size: $font-normal;
-	font-weight: 700;
-	text-align: center;
-	text-decoration: none;
-	line-height: 1;
+  /* main attracting colour */
+  &--highlight {
+    background-color: map.get($colors-primary, 'main');
+    color: map.get($grayscale, 'light-1');
 
-	/* primary colour */
-	&--highlight {
-		background-color: $col-first;
-		color: $gry-light-1;
+    /* 'hover', 'active' states */
+    &:focus,
+    &:hover,
+    &:active { background-color: map.get($colors-primary, 'active'); }
+  }
 
-		/* 'hover', 'active' states */
-		&:focus,
-		&:hover,
-		&:active { background-color: $col-first-active; }
-	}
-
-	/* see line 19 of 'abstracts/_mixins.scss' for context */
-	@include focus-effect;
+  // styles for when element is focused
+  @include focus-effect;
 }

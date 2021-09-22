@@ -1,10 +1,17 @@
-/*	Abstracts : Mixins - =================================== */
+// Abstracts : Mixins - ===================================================== -
 
-/*	['font-face' generator] -------------------------------- */
-/*	generates a new font family based on parameters given */
+// 'font-face' generator
+// Creates a new '@font-face' declaration
 
-@mixin font-family($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
-  $file: $url + '/' + $weight-num + '-' + $weight-name;
+// The '$file' variable assumes the font filename contains the fontweight both
+// numerically and as a string. For example, a font weight of 400 should have a
+// filename of '400-normal'.
+
+// See the following link for all the commonly-used names for each weight:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
+
+@mixin font-face($url: '/', $weight-num: 400, $weight-name: 'normal', $family: 'null', $style: normal) {
+  $file: $url + $weight-num + '-' + $weight-name;
 
   @font-face {
     font-family: $family;
@@ -16,15 +23,19 @@
   }
 }
 
-/*	['focus' effect] --------------------------------------- */
-/*	styles for elements that are focus-able */
-@mixin focus-effect($width: -.8rem, $height: -.4rem) {
+
+// Styles on focus
+// Appends styles that are applied when an element is focused. Renders a
+// transparent, outlined rectangle behind target element; the size is
+// adjustable.
+
+@mixin focus-effect($width: -0.8rem, $height: -0.4rem) {
 	/* 'before' pseudo */
 	&::before {
 		/* transition */
 		transition:
-			outline-color .1s,
-			background-color .1s
+			outline-color 0.1s,
+			background-color 0.1s
 		;
 		content: '';
 		position: absolute;
@@ -35,7 +46,7 @@
 
 	/* 'focus' state > 'before' pseudo */
 	&:focus::before {
-		outline-color: rgba($col-first-tone3, .5);
-		background-color: rgba($col-first-tone4, .2);
+		outline-color: rgba( map.get($colors-primary, 'tone-3'), 0.5 );
+		background-color: rgba( map.get($colors-primary, 'tone-4'), 0.2);
 	}
 }

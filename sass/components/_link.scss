@@ -1,34 +1,54 @@
-/*	Component - Link
-		[Default] - ================================================ */
+/* Component : Link - ==================================================== - */
 
+/* [Default] --------------------------------------------------------------- */
 .link {
-	/* transition */
-	transition: color .2s;
+  transition: color 0.2s;
 
-	position: relative;
-	z-index: 0;
+  position: relative;
+  z-index: 0;
 
-	/* 'link', 'visited' states */
-	&:link,
-	&:visited {
-		outline: none;
-		font-weight: 700;
-		text-decoration: none;
-		color: $col-first;
-	}
+  /* 'link', 'visited' states */
+  &:link,
+  &:visited {
+    outline: none;
+    font-weight: 700;
+    color: map.get($colors-primary, 'main');
+  }
 
-	/* 'Grey' variation */
-	&--grey {
-		/* 'link', 'visited' states */
-		&:link,
-		&:visited { color: $col-first-tone3; }
+  /* 'focus', 'hover', 'active' states */
+  &:focus,
+  &:hover,
+  &:active { color: map.get($colors-primary, 'active'); }
 
-		/* 'focus' 'hover', 'active' states */
-		&:focus,
-		&:hover,
-		&:active { color: $col-first-tone4; }
-	}
+  /* 'Grey' variation */
+  &--grey {
 
-	/* see line 19 of 'abstracts/_mixins.scss' for context */
-	@include focus-effect;
+    /* 'link', 'visited' states */
+    &:link,
+    &:visited { color: map.get($colors-primary, 'tone-3'); }
+
+    /* 'focus' 'hover', 'active' states */
+    &:focus,
+    &:hover,
+    &:active { color: map.get($colors-primary, 'tone-4'); }
+  }
+
+  /* 'Attribution' variation */
+  &--attribution {
+
+    /* 'link', 'visited' states */
+    &:link,
+    &:visited {
+      font-weight: 500;
+      color: $col-attribution;
+    }
+
+    /* 'focus', 'hover', 'active' states */
+    &:focus,
+    &:hover,
+    &:active {color: map.get($colors-primary, 'tone-3'); }
+  }
+
+  // styles for when element is focused
+  @include focus-effect(-0.4rem, -0.2rem);
 }

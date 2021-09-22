@@ -1,83 +1,84 @@
-/*	Component : Order Summary - ============================ */
+/* Component : Order Summary - =========================================== - */
 
-/*	[Default] ---------------------------------------------- */
+/* [Default] --------------------------------------------------------------- */
 .order-sum {
-	/*	Prevents head image ignoring border radius */
-	overflow: hidden;
+  overflow: hidden;
+	border-radius: map.get($border-radii, 'large');
+	box-shadow: map.get($box-shadows, 'light-blur');
+	background-color: map.get($grayscale, 'light-1');
 
-	border-radius: $brd-large;
-	box-shadow: $shd-light-soft;
-	background-color: $gry-light-1;
-
-	/* hero image */
+  /* hero image */
 	&__head-image {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
-	/*	Content Container */
-	&__content-box {
-		/* Affects: heading, text, '.link' */
-		text-align: center;
-	}
+  /* content container */
+  &__content-box { text-align: center; }
 
-	/*	Heading */
+  /* heading
+   * text-align inherits from 'content-box' */
 	&__heading {
-		margin-bottom: 1.2rem;
-		font-weight: 900;
-		color: $col-first-tone4;
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+    text-align: inherit;
+    color: map.get($colors-primary, 'tone-4');
+  }
+
+  /* item list */
+  &__list { list-style: none; }
+
+  /* 'proceed' button */
+  &__continue { font-size: map.get($font-sizes, 'semi-normal'); }
+
+  /* 'cancel' link */
+  &__cancel {
+    font-size: map.get($font-sizes, 'semi-normal');
+
+    /* 'link', 'visited' states */
+    &:link,
+    &:visited {
+      font-weight: 900;
+      text-decoration: none;
+    }
 	}
 
-	/*	Item list */
-	&__list { list-style: none; }
+/* [Media : max-width: 498px] ---------------------------------------------- */
+  @media only screen and (max-width: 31.125em)	{
 
-	/* continue button */
-	&__continue { font-size: $font-semi-normal; }
+    /* content container */
+    &__content-box { padding: 3.2rem 2.4rem; }
 
-	/* cancel link */
-	&__cancel {
-		font-size: $font-semi-normal;
+    /* heading */
+    &__heading { font-size: map.get($font-sizes, 'big'); }
 
-		/* 'link', 'visited' states */
-		&:link,
-		&:visited { font-weight: 900; }
-	}
+    /* item list */
+    &__list { margin: 2.4rem 0; }
 
-/*	[Media - max-width: 497px] --------------------------------- */
-	@media only screen and (max-width: 31.0625em)	{
-		width: 32.7rem;
+    /* text */
+    &__text { font-size: map.get($font-sizes, 'small'); }
 
-		/* content container */
-		&__content-box { padding: 3.2rem 2.4rem; }
+    /* 'proceed' button */
+    &__continue { margin-bottom: 1.6rem; }
+  }
 
-		/* heading */
-		&__heading { font-size: $font-big; }
+/* [Media : min-width: 498px] ---------------------------------------------- */
+  @media only screen and (min-width: 31.125em)	{
 
-		/* item list */
-		&__list { margin: 2.4rem 0; }
-
-		/* text */
-		&__text { font-size: $font-small; }
-
-		/* 'proceed' button */
-		&__continue { margin-bottom: 1.6rem; }
-	}
-
-/*	[Media - min-width: 498px] --------------------------------- */
-	@media only screen and (min-width: 31.125em)	{
-		width: 45rem;
-
-		/* content container */
-		&__content-box { padding: 4.2rem 4.8rem; }
+    /* content container */
+    &__content-box { padding: 4.2rem 4.8rem; }
 		
-		/* heading */
-		&__heading { font-size: $font-large; }
+    /* heading */
+    &__heading { font-size: map.get($font-sizes, 'large'); }
 
-		/* item list */
-		&__list { margin: 1.2rem 0 2.8rem; }
+    /* item list */
+    &__list { margin: 1.2rem 0 2.8rem; }
 
-		/* 'proceed' button */
-		&__continue { margin-bottom: 2.8rem; }
-	}
+    /* text */
+    &__text { font-size: map.get($font-sizes, 'normal'); }
+
+    /* 'proceed' button */
+    &__continue { margin-bottom: 2.8rem; }
+  }
 }
