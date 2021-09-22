@@ -35,6 +35,7 @@ Two screenshots are available:
 ### Links
 
 - [Live Site URL](https://idiotic-enigma.github.io/order-summary-component)
+- [Frontend Mentor Solution URL](https://www.frontendmentor.io/solutions/order-summary-component-scss-flexbox-css-grid-50r2dk_jb)
 
 ## My process
 
